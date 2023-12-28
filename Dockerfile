@@ -5,7 +5,7 @@ FROM public.ecr.aws/lambda/python:3.12
 COPY requirements.txt ${LAMBDA_TASK_ROOT}/requirements.txt
 RUN  pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
-# Copy function code
+# Copy function code.
 COPY awslambda ${LAMBDA_TASK_ROOT}/awslambda
 COPY telegrambot ${LAMBDA_TASK_ROOT}/telegrambot
 COPY nure ${LAMBDA_TASK_ROOT}/nure
